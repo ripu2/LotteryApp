@@ -1,11 +1,13 @@
-import {configureStore} from '@reduxjs/toolkit'
+import {configureStore, applyMiddleware} from '@reduxjs/toolkit'
 import globalReducer from './globalState'
+import logger from 'redux-logger'
+
 
 export const store = configureStore({
     reducer: {
         global: globalReducer
     },
-    devTools: true
+    devTools: true,
 })
 
 export default store
